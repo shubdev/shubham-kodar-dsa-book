@@ -5,6 +5,7 @@ let initialAmout = Number(prompt("Enter initial amount:"));
 let rate = Number(prompt("Enter rate of interest:"));
 let time = Number(prompt("Enter time (in years):"));
 
+//as per formula 
 let amount = initialAmout * Math.pow((1 + rate / 100), time);
 let compoundInterest = amount - initialAmout;
 
