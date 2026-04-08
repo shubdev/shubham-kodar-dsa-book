@@ -1,13 +1,17 @@
-//Print all the factors of a number
+//Check if the number is Prime or not.
 
-function printFactors(n) {
-  for (let i = 1; i <= n; i++) {
-    if (n % i === 0) {
-      console.log(i);
+const number = Number(prompt("Enter number"));
+
+const isPrime = (num) => {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      // if number is divisible by any number between 2 to num-1 then it is not prime
+      return false;
     }
   }
-}
+  return true; // if number is not divisible by any number between 2 to num-1 then it is prime
+};
 
-// Example
-printFactors(50);
+const result = isPrime(number);
+console.log(result);
 

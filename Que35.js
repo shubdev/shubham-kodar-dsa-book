@@ -1,15 +1,13 @@
-//Write a program to take two inputs a, b & find the value of a raised to the power of b. (Ex - a = 2, b = 5, OP - 2^5 = 32)
+//Sum of digits of a number (Ex: 936 = 18)
+function sumOfDigits(num) {
 
-const a = Number(prompt("Enter a"));
-const b = Number(prompt("Enter b"));
+  let str = num.toString();
+  let sum = 0;
 
-const power = (a, b) => {
-  let result = 1;
-  for (let i = 0; i < b; i++) {
-    result *= a; 
+  for (let i = 0; i < str.length; i++) {
+    sum += Number(str[i]);
   }
-  return result;
-};
+  return sum;
+}
 
-const result = power(a, b);
-console.log(result);
+console.log(sumOfDigits(936));

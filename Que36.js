@@ -1,12 +1,14 @@
-//Separate each digit of a number and print it on a new line (Ex - 123 -> OP: 3, 2, 1)
-
-
-function seprate(num) {
+//Accept a number and print its reverse
+function reverseNumber(num) {
+    let reversed = 0;
     while (num > 0) {
         let digit = num % 10;
-        console.log(digit);
+        reversed = (reversed * 10) + digit;
         num = Math.floor(num / 10);
     }
+    return reversed;
 }
-
-seprate(123);
+// Example usage:
+const number = 12345;
+const reversedNumber = reverseNumber(number);
+console.log(`The reverse of ${number} is ${reversedNumber}.`);

@@ -1,20 +1,18 @@
-//Accept a number and check if it is a palindromic number (If number and its reverse are equal, Ex: 12321 - Reverse - 12321)
-function isPalindromicNumber(num) {
-    const originalNum = num;
-    let reversed = 0;
-    while (num > 0) {
-        let digit = num % 10;
-        reversed = (reversed * 10) + digit;
-        num = Math.floor(num / 10);
-    }
+//An Automorphic number is a number whose square ends with the same number itself.
+//Automorphic number (Ex: 5 = 25 = 625 = 390625, 6=36, 76 = 5776)
 
-    return originalNum === reversed;
+
+function isAutomorphic(n) {
+    let square = n * n;
+
+
+    let numStr = n.toString();    // convert to string
+    let squareStr = square.toString();
+
+    return squareStr.endsWith(numStr);
 }
-// Example usage:
-const number = 12321;
-const result = isPalindromicNumber(number);
-if (result) {
-    console.log(`${number} is a palindromic number.`);
-} else {
-    console.log(`${number} is not a palindromic number.`);
-}
+
+console.log(isAutomorphic(5));   // true
+console.log(isAutomorphic(6));   // true
+console.log(isAutomorphic(76));  // true
+console.log(isAutomorphic(7));   // false

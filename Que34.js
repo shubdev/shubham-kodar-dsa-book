@@ -1,17 +1,14 @@
-//Check if the number is Prime or not.
+//Separate each digit of a number and print it on a new line (Ex - 123 -> OP: 3, 2, 1)
 
-const number = Number(prompt("Enter number"));
+function printDigits(num) {
+  while (num > 0) {
+    let digit = num % 10; // Get the last digit
+    console.log(digit); // Print the digit
+    num = Math.floor(num / 10); // Remove the last digit
+  } 
+}
 
-const isPrime = (num) => {
-  for (let i = 2; i < num; i++) {
-    if (num % i === 0) {
-      // if number is divisible by any number between 2 to num-1 then it is not prime
-      return false;
-    }
-  }
-  return true; // if number is not divisible by any number between 2 to num-1 then it is prime
-};
-
-const result = isPrime(number);
-console.log(result);
+// Example usage:
+const number = 123;
+printDigits(number); // Output: 3, 2, 1 
 
