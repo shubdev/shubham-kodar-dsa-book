@@ -1,17 +1,16 @@
-//Print the sum of all even & odd numbers in a range separately.
+//Print the sum of all factors of a number (Ex: 50 -> 1 + 2 + 5 + 10 + 25 = 43)
 
-const sumOfEvenAndOdd = (start, end) => {
-  let evenSum = 0;
-  let oddSum = 0;
-  for (let i = start; i <= end; i++) {
-    if (i % 2 === 0) {
-      evenSum += i;
-    } else {
-      oddSum += i;
+function sumOfFactors(n) {
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    if (n % i === 0) {
+      sum += i; // Add the factor to the sum
     }
   }
-  return { evenSum, oddSum };
-};
+  return sum;
+}
+sumOfFactors(50); // 43
+
 
 
 
