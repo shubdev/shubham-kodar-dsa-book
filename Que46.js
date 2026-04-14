@@ -12,3 +12,5 @@ function rightTriangle(n) {
 // Example usage:
 rightTriangle(5);
 
+
+
