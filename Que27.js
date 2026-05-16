@@ -11,7 +11,6 @@ const sumOfNumber = () => {
         }
         console.log("sum of n numbers=", sum);
     }
-
 }
 sumOfNumber();
 console.log("sum=", sum);

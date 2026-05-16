@@ -11,7 +11,7 @@ const shopDiscount = (price) => {
             if (price[j] <= price[i]) {
                 price[i] -= price[j];
                 console.log(price);
-
+                
             }
             breck;
         }
